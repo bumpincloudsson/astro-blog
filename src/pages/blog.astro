@@ -1,3 +1,9 @@
+---
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+const pageTitle = "Blog Page";
+---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -7,10 +13,8 @@
     <title>Astro | Blog</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-    <h1>Astro Main Blog</h1>
+    <Navigation />
+    <h1>Astro {pageTitle}</h1>
     <p>Read the blog here</p>
   </body>
 </html>

@@ -1,36 +1,8 @@
 ---
-import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Home Page";
-
-const jobs = ["Farmer", "Architect", "Garbage Man"];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-    <!-- these styles are scoped only to the page -->
-    <style>
-      h1 {
-        color: purple;
-      }
-    </style>
-  </head>
-  <body>
-    <Navigation />
-    <h1>Astro {pageTitle}</h1>
-    <ul>
-      <li><a href="/posts/post-1/">Post 1</a></li>
-      <li><a href="/posts/post-2/">Post 2</a></li>
-      <li><a href="/posts/post-3/">Post 3</a></li>
-    </ul>
-    <h2>Jobs</h2>
-    <ul>
-      {jobs.map((job) => <li>{job}</li>)}
-    </ul>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My awesome home subtitle</h2>
+</BaseLayout>
